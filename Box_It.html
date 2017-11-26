@@ -43,7 +43,8 @@
     
     <div class = "Info">
         <p><b>Story:</b></p>
-        A group of bullied kids band together when a shapeshifting demon, taking the appearance of a clown, begins hunting children.
+        <h3 id="story" onmousedown="mouseDown()" onmouseup="mouseUp()">A group of bullied kids band together when a shapeshifting demon, taking the appearance of a clown,
+            begins hunting children. </h3>
         <p><b>rating:</b></p>
         <a href="http://www.imdb.com/title/tt1396484/"><b>imdb: </b></a> 7.8/10
         <a href="https://www.rottentomatoes.com/m/it_2017"><b>rottentomatoes : </b></a>Critics :   7.2/10  , audience :    4.2/5 
@@ -75,11 +76,11 @@
 
     function mouseDown() {
     document.getElementById("story").style.color = "blue";
-}
+    }
 
-function mouseUp() {
-    document.getElementById("story").style.color = "white";
-}
+    function mouseUp() {
+        document.getElementById("story").style.color = "white";
+    }
 
 function bigImg(x) {
     x.style.height = "110px";
