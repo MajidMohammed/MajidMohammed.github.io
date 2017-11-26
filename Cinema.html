@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+               
+<head>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinemas</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="setTimeout(backgroundSlide, 3000)" >
+    
+    <div class="container">
+    
+      <header style="  background-image: url(offers-back.jpg); background-repeat: no-repeat ; background-size:100%;  font-size: 150%;" > 
+         <h1 id = "mainTitle"><b>Oman Movies</b></h1>
+          <h4 id = "subTitle">Your favouret place</h4>
+         <div class="move"> <img id="logo" src="logo.png" alt="This is the logo" height="100" width="100" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></div>
+        </header>
+    
+        <div class="scrollmenu">
+                <a href="index.html"><img src="home.png" alt="home" height="25" width="25"></a>
+                <a href="Cinema.html">Oman Cinemas</a>
+                <a href="Box_office.html">Box-Office</a>
+                <a href="Browse_Movies.html">Browse Movies</a>
+                <a href="About_Us.html">About Us</a>
+                <a href="Contact_Us.html">Contact Us</a>
+                <a href="#search"><img src="search.png" alt="search" height="25" width="25">Search</a>
+                <input type="button" value="Hide title" onclick="OnVisibilty()">
+                <input type="button" value="Show title" onclick="OffVisibilty()">
+              </div>
+    
+          <p style="text-align: center;">Movies on Oman cinams </p>
+
+<div class ="Blocks">
+    <div class = "leftBlock">
+                <a href="Cinema_The_Foreigner.html"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BM2RlMjcyMGQtZTU3OC00NGRlLWExMGEtYjU3ZjUyMDc0NWZmXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="The Foreigner" style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"> </a>
+                <p> The Foreigner </p>
+                <p>2017</p>
+                <p>  Action, Thriller  </p>
+         </div>
+    
+    <div class = "middleBlock">
+        <a href="Cinema_Leatherface.html">  <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyMDE1MzE1NF5BMl5BanBnXkFtZTgwMzcwNTU1MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Leatherface" style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);">  </a>
+        <p> Leatherface </p>
+        <p>2017</p>
+        <p>  Horror, Thriller  </p>
+    </div>
+    <div class = "middleBlock">
+        <a href="Cinema_KINGSMAN.html">   <img src="https://assets.voxcinemas.com/posters/P_HO00004773.jpg" alt="KINGSMAN "  style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);">  </a>
+        <p> KINGSMAN : THE GOLDEN CIRCLE </p>
+        <p>2017</p>
+        <p>  Action, Adventure, Comedy </p>
+    </div>
+    <div class = "middleBlock">
+        <a href="Info_Movies_War_Apes.html"> <img  src="https://yts.ag/assets/images/movies/war_for_the_planet_of_the_apes_2017/medium-cover.jpg" alt="War for the Planet of the Apes"  style="text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);">  </a>
+            <p > War for the Planet of the Apes </p>
+            <p>2017</p>
+            <p> Action / Adventure / Drama / Sci-Fi / Thriller </p>
+       </div>
+</div>
+
+<footer>Copyright &copy; Wings Of Fredoom</footer>
+
+</div>
+<script>
+    var header = document.getElementsByTagName('header')[0];
+    var background = ['url(background/1.jpg)', 'url(background/2.jpg)', 'url(background/3.jpg)' , 'url(background/4.jpg)'];
+    var i =0;
+// cahnge the background:
+    function backgroundSlide() {
+    header.style.backgroundImage = background[i];  
+    i++;
+    if ( i >= background.length){ i = 0;}
+    setTimeout(backgroundSlide, 3000);
+    }
+
+    function mouseDown() {
+    document.getElementById("story").style.color = "blue";
+}
+
+function mouseUp() {
+    document.getElementById("story").style.color = "white";
+}
+
+function bigImg(x) {
+    x.style.height = "110px";
+    x.style.width = "110px";
+}
+
+function normalImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+}
+
+function OnVisibilty(){
+    document.getElementById('mainTitle').style.visibility='hidden'
+    document.getElementById('subTitle').style.visibility='hidden'
+    document.getElementById('logo').style.visibility='hidden'
+}
+function OffVisibilty(){
+    document.getElementById('mainTitle').style.visibility='visible'
+    document.getElementById('subTitle').style.visibility='visible'
+    document.getElementById('logo').style.visibility='visible'
+}
+
+
+</script>
+</body>
+</html>

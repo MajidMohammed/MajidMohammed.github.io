@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+              
+<head>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box-Office</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="setTimeout(backgroundSlide, 3000)" >
+        
+        <div class="container">
+        
+          <header style="  background-image: url(offers-back.jpg); background-repeat: no-repeat ; background-size:100%;  font-size: 150%;" > 
+             <h1 id = "mainTitle"><b>Oman Movies</b></h1>
+              <h4 id = "subTitle">Your favouret place</h4>
+             <div class="move"> <img id="logo" src="logo.png" alt="This is the logo" height="100" width="100" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></div>
+            </header>
+        
+            <div class="scrollmenu">
+                    <a href="index.html"><img src="home.png" alt="home" height="25" width="25"></a>
+                    <a href="Cinema.html">Oman Cinemas</a>
+                    <a href="Box_office.html">Box-Office</a>
+                    <a href="Browse_Movies.html">Browse Movies</a>
+                    <a href="About_Us.html">About Us</a>
+                    <a href="Contact_Us.html">Contact Us</a>
+                    <a href="#search"><img src="search.png" alt="search" height="25" width="25">Search</a>
+                    <input type="button" value="Hide title" onclick="OnVisibilty()">
+                    <input type="button" value="Show title" onclick="OffVisibilty()">
+                  </div>
+        
+
+<div class ="Blocks">
+    <div class = "leftBlock">
+                <a href="Box_Blade_Runner_2049.html"><img src="http://empireonline.media/jpg/70/0/0/1280/960/aspectfit/0/0/0/0/0/0/c/articles/599f53741deb298668eb8728/blade-runner-2049-poster.jpg" alt="Blade Runner 2049 "  style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"></a>
+                <p> Blade Runner 2049  </p>
+                <p style="color:Red;"><b>first place</b></p>
+                <p>Mystery, Sci-Fi, Thriller </p>
+         </div>
+    
+    <div class = "middleBlock">
+        <a href="Box_The_Mountain_Between_Us.html"><img src="https://in.bmscdn.com/iedb/movies/images/website/poster/large/the-mountain-between-us-et00057936-01-06-2017-12-52-01.jpg" alt="The Mountain Between Us " style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"></a>
+        <p> The Mountain Between Us  </p>
+         <p style="color:Red;"><b>Second place</b></p>
+        <p>Action, Adventure, Drama</p>
+    </div>
+    <div class = "middleBlock">
+            <a href="Box_It.html"> <img src="http://www.joblo.com/images_arrownews/it-teaser-poster.jpg" alt="It " style="width:230px;height:345px; text-align:center;   box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"></a>
+            <p> It  </p>
+            <p style="color:Red;"><b>The third place</b></p>
+            <p>Drama, Horror, Thriller </p>
+    </div>
+     <div class = "middleBlock">
+            <a href="Box_My_Little_Pony_The_Movie.html"><img src="http://www.impawards.com/2017/posters/my_little_pony_the_movie_ver4_xlg.jpg" alt="My Little Pony: The Movie  " style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"></a>
+            <p>My Little Pony: The Movie </p>
+            <p style="color:Red;"><b>fourth place</b></p>
+            <p>Animation, Adventure, Comedy </p>
+    </div>
+</div>
+<div class ="Blocks">
+    <div class = "leftBlock">
+    <a href="Box_Kingsman_The_Golden_Circle.html"><img src="https://posterspy.com/wp-content/uploads/2016/04/kingsman-the-golden-circle-poster-1.jpg" alt="Kingsman: The Golden Circle " style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);"></a>
+            <p>Kingsman: The Golden Circle  </p>
+            <p style="color:Red;"><b>Fifth place</b></p>
+            <p> Action, Adventure, Comedy </p>
+    </div>
+    </div>
+<footer>Copyright &copy; Wings Of Fredoom</footer>
+
+</div>
+<script>
+        var header = document.getElementsByTagName('header')[0];
+        var background = ['url(background/1.jpg)', 'url(background/2.jpg)', 'url(background/3.jpg)' , 'url(background/4.jpg)'];
+        var i =0;
+    // cahnge the background:
+        function backgroundSlide() {
+        header.style.backgroundImage = background[i];  
+        i++;
+        if ( i >= background.length){ i = 0;}
+        setTimeout(backgroundSlide, 3000);
+        }
+
+        function mouseDown() {
+        document.getElementById("story").style.color = "blue";
+    }
+    
+    function mouseUp() {
+        document.getElementById("story").style.color = "white";
+    }
+
+    function bigImg(x) {
+        x.style.height = "110px";
+        x.style.width = "110px";
+    }
+
+    function normalImg(x) {
+        x.style.height = "100px";
+        x.style.width = "100px";
+    }
+
+    function OnVisibilty(){
+        document.getElementById('mainTitle').style.visibility='hidden'
+        document.getElementById('subTitle').style.visibility='hidden'
+        document.getElementById('logo').style.visibility='hidden'
+    }
+    function OffVisibilty(){
+        document.getElementById('mainTitle').style.visibility='visible'
+        document.getElementById('subTitle').style.visibility='visible'
+        document.getElementById('logo').style.visibility='visible'
+    }
+
+
+</script>
+</body>
+</html>

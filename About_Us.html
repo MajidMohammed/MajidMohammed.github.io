@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+          
+<head>
+        
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>About Us</title>
+<style>
+div.container {
+    background-image: url("background2.jpg");
+    width: 100%;
+    border: 1px solid rgb(53, 183, 243);
+    font-family :Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    overflow: auto;
+
+}
+
+div.Blocks{
+    padding-left : 10px;
+    padding-bottom : 10px;
+    padding-right : 10px;
+    padding-top : 10px;
+
+}
+
+
+div.middleBlock{
+    margin-left: 2%;
+    float: left;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 89%;
+    height: 14cm;
+    font-size: 200%;
+}
+
+p {
+    border-left: 4px solid gray;
+    background-color: #F3ECEC;
+    text-align : center;
+}
+
+
+header, footer {
+    padding: 1em;
+    clear: left;
+    text-align: center;
+    color: rgb(224,204,215);
+    text-shadow: 2px 2px 5px rgb(239,91,175);
+   
+}
+
+
+
+div.scrollmenu {
+    background-color:rgba(51, 51, 51, 0.32);
+    overflow: auto;
+    
+
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+</style>
+</head>
+
+
+<body onload="setTimeout(backgroundSlide, 3000)" >
+    
+    <div class="container">
+    
+      <header style="  background-image: url(offers-back.jpg); background-repeat: no-repeat ; background-size:100%;  font-size: 150%;" > 
+         <h1 id = "mainTitle"><b>Oman Movies</b></h1>
+          <h4 id = "subTitle">Your favouret place</h4>
+         <div class="move"> <img id="logo" src="logo.png" alt="This is the logo" height="100" width="100" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></div>
+        </header>
+    
+        <div class="scrollmenu">
+                <a href="index.html"><img src="home.png" alt="home" height="25" width="25"></a>
+                <a href="Cinema.html">Oman Cinemas</a>
+                <a href="Box_office.html">Box-Office</a>
+                <a href="Browse_Movies.html">Browse Movies</a>
+                <a href="About_Us.html">About Us</a>
+                <a href="Contact_Us.html">Contact Us</a>
+                <a href="#search"><img src="search.png" alt="search" height="25" width="25">Search</a>
+                <input type="button" value="Hide title" onclick="OnVisibilty()">
+                <input type="button" value="Show title" onclick="OffVisibilty()">
+              </div>
+    
+
+<div class ="Blocks">
+    
+    <div class = "middleBlock">
+       
+        
+        <p>Welcome to Oman Movies , Special thanks for using our website..</p>
+            <p>"Oman Movies" is a web site created by<mark> Majed ALsaidi</mark> and <mark> Sami ALsaidi</mark> . 
+            It have many sections like "Oman Cinemas" which show the differents cinema in 
+            Oman and "Box-Office" which contain the top new moveis in the US Box-Office , 
+            and "Brows Movies" which contain different sections also like comedy,action,animy moveis .</p>
+        <p  style="color:rgba(255, 132, 0, 0.7);" >All intellectual property rights such as website name, website logo, designs 
+            and copyrights are reserved and are exclusively owned by Oman Movies</p>
+       <p> If you have any issue / feedback Please <a href="Contact_Us.html">Contact US</a> ...Thank you!.</p>
+        <p>Our mail: <a href="mailto:OmanCinema@gmail.com"><mark>OmanCinema@gmail.com</mark></a> <mark>0096890990243</mark></p>
+       </div>
+</div>
+
+<footer>Copyright &copy; Wings Of Fredoom</footer>
+
+</div>
+<script>
+    var header = document.getElementsByTagName('header')[0];
+    var background = ['url(background/1.jpg)', 'url(background/2.jpg)', 'url(background/3.jpg)' , 'url(background/4.jpg)'];
+    var i =0;
+// cahnge the background:
+    function backgroundSlide() {
+    header.style.backgroundImage = background[i];  
+    i++;
+    if ( i >= background.length){ i = 0;}
+    setTimeout(backgroundSlide, 3000);
+    }
+
+    function mouseDown() {
+    document.getElementById("story").style.color = "blue";
+}
+
+function mouseUp() {
+    document.getElementById("story").style.color = "white";
+}
+
+function bigImg(x) {
+    x.style.height = "110px";
+    x.style.width = "110px";
+}
+
+function normalImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+}
+
+function OnVisibilty(){
+    document.getElementById('mainTitle').style.visibility='hidden'
+    document.getElementById('subTitle').style.visibility='hidden'
+    document.getElementById('logo').style.visibility='hidden'
+}
+function OffVisibilty(){
+    document.getElementById('mainTitle').style.visibility='visible'
+    document.getElementById('subTitle').style.visibility='visible'
+    document.getElementById('logo').style.visibility='visible'
+}
+
+
+</script>
+</body>
+</html>

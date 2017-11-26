@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+             
+<head>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movies Information : the_mountain_between_us</title>
+        <link rel="stylesheet" type="text/css" href="insideStyle.css">
+
+</head>
+
+<body onload="setTimeout(backgroundSlide, 3000)" >
+    
+    <div class="container">
+    
+      <header style="  background-image: url(offers-back.jpg); background-repeat: no-repeat ; background-size:100%;  font-size: 150%;" > 
+         <h1 id = "mainTitle"><b>Oman Movies</b></h1>
+          <h4 id = "subTitle">Your favouret place</h4>
+         <div class="move"> <img id="logo" src="logo.png" alt="This is the logo" height="100" width="100" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></div>
+        </header>
+    
+        <div class="scrollmenu">
+                <a href="index.html"><img src="home.png" alt="home" height="25" width="25"></a>
+                <a href="Cinema.html">Oman Cinemas</a>
+                <a href="Box_office.html">Box-Office</a>
+                <a href="Browse_Movies.html">Browse Movies</a>
+                <a href="About_Us.html">About Us</a>
+                <a href="Contact_Us.html">Contact Us</a>
+                <a href="#search"><img src="search.png" alt="search" height="25" width="25">Search</a>
+                <input type="button" value="Hide title" onclick="OnVisibilty()">
+                <input type="button" value="Show title" onclick="OffVisibilty()">
+              </div>
+    
+
+<div class ="Blocks">
+    <div class = "leftBlock">
+         <img src="https://in.bmscdn.com/iedb/movies/images/website/poster/large/the-mountain-between-us-et00057936-01-06-2017-12-52-01.jpg" alt="The Mountain Between Us " style="width:230px;height:345px; text-align:center;  box-shadow: 3px 3px 2px rgb(251 , 249 , 235);">
+        <p> The Mountain Between Us  </p>
+         <p style="color:Red;"><b>Second place</b></p>
+        <p>Action, Adventure, Drama</p>
+         </div>
+    
+    <div class = "Info">
+        <p><b>Story:</b></p>
+        Stranded after a tragic plane crash, two strangers must forge a connection to survive the extreme elements of
+         a remote snow covered mountain. When they realize help is not coming, they embark on a perilous journey across the wilderness.
+        <p><b>rating:</b></p>
+        <a href="http://www.imdb.com/title/tt2226597/"><b>imdb: </b></a>  6.2/10
+        <a href="https://www.rottentomatoes.com/m/the_mountain_between_us"><b>rottentomatoes : </b></a>Critics :  5.2/10   , audience :    3.3/5
+        <p><b>Trailer:</b></p>
+
+        
+        <iframe width="320" height="215" src="https://www.youtube.com/embed/3jyzGKXBOxA"></iframe>
+
+
+
+    </div>
+    
+</div>
+
+<footer>Copyright &copy; Wings Of Fredoom</footer>
+
+</div>
+<script>
+    var header = document.getElementsByTagName('header')[0];
+    var background = ['url(background/1.jpg)', 'url(background/2.jpg)', 'url(background/3.jpg)' , 'url(background/4.jpg)'];
+    var i =0;
+// cahnge the background:
+    function backgroundSlide() {
+    header.style.backgroundImage = background[i];  
+    i++;
+    if ( i >= background.length){ i = 0;}
+    setTimeout(backgroundSlide, 3000);
+    }
+
+    function mouseDown() {
+    document.getElementById("story").style.color = "blue";
+}
+
+function mouseUp() {
+    document.getElementById("story").style.color = "white";
+}
+
+function bigImg(x) {
+    x.style.height = "110px";
+    x.style.width = "110px";
+}
+
+function normalImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+}
+
+function OnVisibilty(){
+    document.getElementById('mainTitle').style.visibility='hidden'
+    document.getElementById('subTitle').style.visibility='hidden'
+    document.getElementById('logo').style.visibility='hidden'
+}
+function OffVisibilty(){
+    document.getElementById('mainTitle').style.visibility='visible'
+    document.getElementById('subTitle').style.visibility='visible'
+    document.getElementById('logo').style.visibility='visible'
+}
+
+
+</script>
+</body>
+</html>
